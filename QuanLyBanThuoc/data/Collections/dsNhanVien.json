@@ -1,0 +1,76 @@
+[{
+  "_id": {
+    "$oid": "61a4b926fcca1d44c8529012"
+  },
+  "ten_Nhan_Vien": "Phạm Vũ Hoài An",
+  "sdt": "0966105479",
+  "trang_Thai_Lam_Viec": "Đang làm việc",
+  "gioi_Tinh": "Nữ",
+  "luong": 5000000,
+  "ngay_Sinh": {
+    "$date": "2000-04-19T17:00:00Z"
+  },
+  "so_NhanVien": "NV1",
+  "chucVu": "Quản lý",
+  "dia_Chi": "60 Thống Nhất, p10, Q.Gò Vấp"
+},{
+  "_id": {
+    "$oid": "61a4b926fcca1d44c8529013"
+  },
+  "ten_Nhan_Vien": "Nguyễn Tuấn Thanh",
+  "sdt": "0374779028",
+  "trang_Thai_Lam_Viec": "Đang làm việc",
+  "gioi_Tinh": "Nam",
+  "luong": 5000000,
+  "ngay_Sinh": {
+    "$date": "2001-05-19T17:00:00Z"
+  },
+  "so_NhanVien": "NV2",
+  "chucVu": "Nhân viên bán hàng",
+  "dia_Chi": "56 Đường số 4, p Hiệp Bình Phước, Q.Thủ Đức"
+},{
+  "_id": {
+    "$oid": "61a4b926fcca1d44c8529014"
+  },
+  "ten_Nhan_Vien": "Phạm Thị Hoa",
+  "sdt": "0966712345",
+  "trang_Thai_Lam_Viec": "Đã nghỉ việc",
+  "gioi_Tinh": "Nữ",
+  "luong": 5000000,
+  "ngay_Sinh": {
+    "$date": "2000-06-19T17:00:00Z"
+  },
+  "so_NhanVien": "NV3",
+  "chucVu": "Nhân viên bán hàng",
+  "dia_Chi": "170 Thống Nhất, p10, Q.Gò Vấp"
+},{
+  "_id": {
+    "$oid": "61a4df544a40bf1ef85d9f34"
+  },
+  "ten_Nhan_Vien": "Lê Tuấn Tài",
+  "sdt": "0949218444",
+  "trang_Thai_Lam_Viec": "Đang làm việc",
+  "gioi_Tinh": "Nam",
+  "luong": 5000000,
+  "ngay_Sinh": {
+    "$date": "2001-11-07T17:00:00Z"
+  },
+  "so_NhanVien": "NV4",
+  "chucVu": "Quản lý",
+  "dia_Chi": "Bình Dương"
+},{
+  "_id": {
+    "$oid": "61a4df864a40bf1ef85d9f35"
+  },
+  "ten_Nhan_Vien": "Nguyễn Hữu Trọng",
+  "sdt": "0949218447",
+  "trang_Thai_Lam_Viec": "Đang làm việc",
+  "gioi_Tinh": "Nam",
+  "luong": 5000000,
+  "ngay_Sinh": {
+    "$date": "2001-11-07T17:00:00Z"
+  },
+  "so_NhanVien": "NV5",
+  "chucVu": "Quản lý",
+  "dia_Chi": "Bình Dương"
+}]

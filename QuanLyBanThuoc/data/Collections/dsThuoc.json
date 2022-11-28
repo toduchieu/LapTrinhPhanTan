@@ -1,0 +1,394 @@
+[{
+  "_id": {
+    "$oid": "61a4b926fcca1d44c852902b"
+  },
+  "hanSD": {
+    "$date": "2023-12-31T17:00:00Z"
+  },
+  "soLuongTon": 495,
+  "NCC_id": {
+    "$oid": "61a4b926fcca1d44c8529029"
+  },
+  "LoaiThuoc_Id": {
+    "$oid": "61a4b926fcca1d44c8529028"
+  },
+  "ngaySX": {
+    "$date": {
+      "$numberLong": "-28800000"
+    }
+  },
+  "NuocSX_id": {
+    "$oid": "61a4b926fcca1d44c852902a"
+  },
+  "tenThuoc": "Telfast HD 180mg",
+  "trangThaiThuoc": "Còn bán",
+  "donGia": 75000
+},{
+  "_id": {
+    "$oid": "61a4b926fcca1d44c852902f"
+  },
+  "hanSD": {
+    "$date": "2021-02-01T17:00:00Z"
+  },
+  "soLuongTon": 20,
+  "NCC_id": {
+    "$oid": "61a4b926fcca1d44c852902d"
+  },
+  "LoaiThuoc_Id": {
+    "$oid": "61a4b926fcca1d44c852902c"
+  },
+  "ngaySX": {
+    "$date": "2019-01-01T17:00:00Z"
+  },
+  "NuocSX_id": {
+    "$oid": "61a4b926fcca1d44c852902e"
+  },
+  "tenThuoc": "Medoral (Chai 250ml)",
+  "trangThaiThuoc": "Còn bán",
+  "donGia": 85000
+},{
+  "_id": {
+    "$oid": "61a4b926fcca1d44c8529033"
+  },
+  "hanSD": {
+    "$date": "1970-01-01T00:00:02.008Z"
+  },
+  "soLuongTon": 124,
+  "NCC_id": {
+    "$oid": "61a4b926fcca1d44c8529031"
+  },
+  "LoaiThuoc_Id": {
+    "$oid": "61a4b926fcca1d44c8529030"
+  },
+  "ngaySX": {
+    "$date": "1970-01-01T00:00:02.011Z"
+  },
+  "NuocSX_id": {
+    "$oid": "61a4b926fcca1d44c8529032"
+  },
+  "tenThuoc": "Postinor 1 1.5mg",
+  "trangThaiThuoc": "Còn bán",
+  "donGia": 33000
+},{
+  "_id": {
+    "$oid": "61a4bdaffcca1d44c8529041"
+  },
+  "hanSD": {
+    "$date": "2022-09-15T11:46:01.651Z"
+  },
+  "soLuongTon": 150,
+  "NCC_id": {
+    "$oid": "61a4b926fcca1d44c852901c"
+  },
+  "LoaiThuoc_Id": {
+    "$oid": "61a4b926fcca1d44c8529034"
+  },
+  "ngaySX": {
+    "$date": "2020-09-12T11:45:45.050Z"
+  },
+  "NuocSX_id": {
+    "$oid": "61a4b926fcca1d44c8529018"
+  },
+  "tenThuoc": "Prospan (100ml)",
+  "trangThaiThuoc": "Còn bán",
+  "donGia": 680000
+},{
+  "_id": {
+    "$oid": "61a4be44fcca1d44c8529042"
+  },
+  "hanSD": {
+    "$date": "2022-12-14T11:46:01.651Z"
+  },
+  "soLuongTon": 150,
+  "NCC_id": {
+    "$oid": "61a4b926fcca1d44c8529020"
+  },
+  "LoaiThuoc_Id": {
+    "$oid": "61a4b926fcca1d44c8529035"
+  },
+  "ngaySX": {
+    "$date": "2020-07-07T11:45:45.050Z"
+  },
+  "NuocSX_id": {
+    "$oid": "61a4b926fcca1d44c8529019"
+  },
+  "tenThuoc": "Bidiphar (250ml)",
+  "trangThaiThuoc": "Còn bán",
+  "donGia": 459000
+},{
+  "_id": {
+    "$oid": "61a4be86fcca1d44c8529043"
+  },
+  "hanSD": {
+    "$date": "2022-07-14T11:46:01.651Z"
+  },
+  "soLuongTon": 250,
+  "NCC_id": {
+    "$oid": "61a4b926fcca1d44c8529021"
+  },
+  "LoaiThuoc_Id": {
+    "$oid": "61a4b926fcca1d44c8529036"
+  },
+  "ngaySX": {
+    "$date": "2019-07-04T11:45:45.050Z"
+  },
+  "NuocSX_id": {
+    "$oid": "61a4b926fcca1d44c852902e"
+  },
+  "tenThuoc": "Semiflit 120",
+  "trangThaiThuoc": "Còn bán",
+  "donGia": 420000
+},{
+  "_id": {
+    "$oid": "61a4bef4fcca1d44c8529044"
+  },
+  "hanSD": {
+    "$date": "2025-11-20T11:46:01.651Z"
+  },
+  "soLuongTon": 500,
+  "NCC_id": {
+    "$oid": "61a4b926fcca1d44c8529022"
+  },
+  "LoaiThuoc_Id": {
+    "$oid": "61a4b926fcca1d44c8529037"
+  },
+  "ngaySX": {
+    "$date": "2021-06-09T11:45:45.050Z"
+  },
+  "NuocSX_id": {
+    "$oid": "61a4b926fcca1d44c8529019"
+  },
+  "tenThuoc": "VRohto Vitamin (13ml)",
+  "trangThaiThuoc": "Còn bán",
+  "donGia": 46900
+},{
+  "_id": {
+    "$oid": "61a4bfa9fcca1d44c8529045"
+  },
+  "hanSD": {
+    "$date": "2023-11-11T11:46:01.651Z"
+  },
+  "soLuongTon": 350,
+  "NCC_id": {
+    "$oid": "61a4b926fcca1d44c8529023"
+  },
+  "LoaiThuoc_Id": {
+    "$oid": "61a4b926fcca1d44c8529038"
+  },
+  "ngaySX": {
+    "$date": "2020-02-15T11:45:45.050Z"
+  },
+  "NuocSX_id": {
+    "$oid": "61a4b926fcca1d44c852902e"
+  },
+  "tenThuoc": "Fugacar Mebendazole (500mg)",
+  "trangThaiThuoc": "Còn bán",
+  "donGia": 18500
+},{
+  "_id": {
+    "$oid": "61a4c007fcca1d44c8529046"
+  },
+  "hanSD": {
+    "$date": "2025-05-22T11:46:01.651Z"
+  },
+  "soLuongTon": 650,
+  "NCC_id": {
+    "$oid": "61a4b926fcca1d44c8529024"
+  },
+  "LoaiThuoc_Id": {
+    "$oid": "61a4b926fcca1d44c8529039"
+  },
+  "ngaySX": {
+    "$date": "2021-02-09T11:45:45.050Z"
+  },
+  "NuocSX_id": {
+    "$oid": "61a4b926fcca1d44c852902e"
+  },
+  "tenThuoc": "Tanganil (500mg)",
+  "trangThaiThuoc": "Còn bán",
+  "donGia": 150000
+},{
+  "_id": {
+    "$oid": "61a4c0a0fcca1d44c8529047"
+  },
+  "hanSD": {
+    "$date": "2023-05-31T11:46:01.651Z"
+  },
+  "soLuongTon": 1200,
+  "NCC_id": {
+    "$oid": "61a4b926fcca1d44c8529022"
+  },
+  "LoaiThuoc_Id": {
+    "$oid": "61a4b926fcca1d44c852903a"
+  },
+  "ngaySX": {
+    "$date": "2021-08-30T11:45:45.050Z"
+  },
+  "NuocSX_id": {
+    "$oid": "61a4b926fcca1d44c8529019"
+  },
+  "tenThuoc": "Panadol Extra",
+  "trangThaiThuoc": "Còn bán",
+  "donGia": 214000
+},{
+  "_id": {
+    "$oid": "61a4c21bfcca1d44c8529048"
+  },
+  "hanSD": {
+    "$date": "2024-02-07T11:46:01.651Z"
+  },
+  "soLuongTon": 1200,
+  "NCC_id": {
+    "$oid": "61a4b926fcca1d44c8529023"
+  },
+  "LoaiThuoc_Id": {
+    "$oid": "61a4b926fcca1d44c852903b"
+  },
+  "ngaySX": {
+    "$date": "2021-07-09T11:45:45.050Z"
+  },
+  "NuocSX_id": {
+    "$oid": "61a4b926fcca1d44c852902e"
+  },
+  "tenThuoc": "Dầu gió Trường Sơn (6ml)",
+  "trangThaiThuoc": "Còn bán",
+  "donGia": 11000
+},{
+  "_id": {
+    "$oid": "61a4c29dfcca1d44c8529049"
+  },
+  "hanSD": {
+    "$date": "2022-08-22T11:46:01.651Z"
+  },
+  "soLuongTon": 250,
+  "NCC_id": {
+    "$oid": "61a4b926fcca1d44c8529024"
+  },
+  "LoaiThuoc_Id": {
+    "$oid": "61a4b926fcca1d44c852903c"
+  },
+  "ngaySX": {
+    "$date": "2020-12-23T11:45:45.050Z"
+  },
+  "NuocSX_id": {
+    "$oid": "61a4b926fcca1d44c852902e"
+  },
+  "tenThuoc": "Gynofar (500ml)",
+  "trangThaiThuoc": "Còn bán",
+  "donGia": 21000
+},{
+  "_id": {
+    "$oid": "61a4c316fcca1d44c852904a"
+  },
+  "hanSD": {
+    "$date": "2022-01-03T11:46:01.651Z"
+  },
+  "soLuongTon": 200,
+  "NCC_id": {
+    "$oid": "61a4b926fcca1d44c8529026"
+  },
+  "LoaiThuoc_Id": {
+    "$oid": "61a4b926fcca1d44c852903d"
+  },
+  "ngaySX": {
+    "$date": "2020-09-02T11:45:45.050Z"
+  },
+  "NuocSX_id": {
+    "$oid": "61a4b926fcca1d44c852902a"
+  },
+  "tenThuoc": "Tadimax (Hộp 1 lọ 42 viên)",
+  "trangThaiThuoc": "Còn bán",
+  "donGia": 140000
+},{
+  "_id": {
+    "$oid": "61a4c376fcca1d44c852904b"
+  },
+  "hanSD": {
+    "$date": "2024-06-12T11:46:01.651Z"
+  },
+  "soLuongTon": 800,
+  "NCC_id": {
+    "$oid": "61a4b926fcca1d44c852902d"
+  },
+  "LoaiThuoc_Id": {
+    "$oid": "61a4b926fcca1d44c852903e"
+  },
+  "ngaySX": {
+    "$date": "2021-09-13T11:45:45.050Z"
+  },
+  "NuocSX_id": {
+    "$oid": "61a4b926fcca1d44c852901a"
+  },
+  "tenThuoc": "Mongor ( 20 viên)",
+  "trangThaiThuoc": "Còn bán",
+  "donGia": 180000
+},{
+  "_id": {
+    "$oid": "61a4c3f8fcca1d44c852904c"
+  },
+  "hanSD": {
+    "$date": "2024-02-01T11:46:01.651Z"
+  },
+  "soLuongTon": 800,
+  "NCC_id": {
+    "$oid": "61a4b926fcca1d44c8529029"
+  },
+  "LoaiThuoc_Id": {
+    "$oid": "61a4b926fcca1d44c852903f"
+  },
+  "ngaySX": {
+    "$date": "2021-09-01T11:45:45.050Z"
+  },
+  "NuocSX_id": {
+    "$oid": "61a4b926fcca1d44c852902e"
+  },
+  "tenThuoc": "Upsa C (1g)",
+  "trangThaiThuoc": "Còn bán",
+  "donGia": 35000
+},{
+  "_id": {
+    "$oid": "61a4c440fcca1d44c852904d"
+  },
+  "hanSD": {
+    "$date": "2021-01-04T17:00:00Z"
+  },
+  "soLuongTon": 495,
+  "NCC_id": {
+    "$oid": "61a4b926fcca1d44c8529029"
+  },
+  "LoaiThuoc_Id": {
+    "$oid": "61a4b926fcca1d44c8529028"
+  },
+  "ngaySX": {
+    "$date": "2018-01-02T17:00:00Z"
+  },
+  "NuocSX_id": {
+    "$oid": "61a4b926fcca1d44c852902a"
+  },
+  "tenThuoc": "Telfast HD 80mg",
+  "trangThaiThuoc": "Còn bán",
+  "donGia": 35000
+},{
+  "_id": {
+    "$oid": "61a4c4a8fcca1d44c852904e"
+  },
+  "hanSD": {
+    "$date": "2023-02-02T17:00:00Z"
+  },
+  "soLuongTon": 25,
+  "NCC_id": {
+    "$oid": "61a4b926fcca1d44c852902d"
+  },
+  "LoaiThuoc_Id": {
+    "$oid": "61a4b926fcca1d44c852902c"
+  },
+  "ngaySX": {
+    "$date": "2019-01-23T17:00:00Z"
+  },
+  "NuocSX_id": {
+    "$oid": "61a4b926fcca1d44c852902e"
+  },
+  "tenThuoc": "Medoral (Chai 100ml)",
+  "trangThaiThuoc": "Còn bán",
+  "donGia": 85000
+}]

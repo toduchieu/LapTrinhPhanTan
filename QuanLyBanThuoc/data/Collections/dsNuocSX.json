@@ -1,0 +1,36 @@
+[{
+  "_id": {
+    "$oid": "61a4b926fcca1d44c8529018"
+  },
+  "ten_NuocSX": "Đức"
+},{
+  "_id": {
+    "$oid": "61a4b926fcca1d44c8529019"
+  },
+  "ten_NuocSX": "Anh"
+},{
+  "_id": {
+    "$oid": "61a4b926fcca1d44c852901a"
+  },
+  "ten_NuocSX": "Nhật Bản"
+},{
+  "_id": {
+    "$oid": "61a4b926fcca1d44c852901b"
+  },
+  "ten_NuocSX": "Khác"
+},{
+  "_id": {
+    "$oid": "61a4b926fcca1d44c852902a"
+  },
+  "ten_NuocSX": "Pháp"
+},{
+  "_id": {
+    "$oid": "61a4b926fcca1d44c852902e"
+  },
+  "ten_NuocSX": "Việt Nam"
+},{
+  "_id": {
+    "$oid": "61a4b926fcca1d44c8529032"
+  },
+  "ten_NuocSX": "Hungary"
+}]

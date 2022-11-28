@@ -1,0 +1,140 @@
+[{
+  "_id": {
+    "$oid": "61a4dbd34a40bf2bbca5ff48"
+  },
+  "ngay_Lap": {
+    "$date": "2021-11-21T17:00:00Z"
+  },
+  "ma_Khach_Hang": {
+    "$oid": "61a4dbb14a40bf2bbca5ff47"
+  },
+  "ma_Nhan_Vien": {
+    "$oid": "61a4b926fcca1d44c8529012"
+  },
+  "dsCTHD": [
+    {
+      "tongTien": 375000,
+      "Thuoc_Id": {
+        "$oid": "61a4b926fcca1d44c852902b"
+      },
+      "soLuong": 5
+    },
+    {
+      "tongTien": 425000,
+      "Thuoc_Id": {
+        "$oid": "61a4b926fcca1d44c852902f"
+      },
+      "soLuong": 5
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "61a4dc484a40bf2bbca5ff4b"
+  },
+  "ngay_Lap": {
+    "$date": "2021-11-22T17:00:00Z"
+  },
+  "ma_Khach_Hang": {
+    "$oid": "61a4dc434a40bf2bbca5ff4a"
+  },
+  "ma_Nhan_Vien": {
+    "$oid": "61a4b926fcca1d44c8529012"
+  },
+  "dsCTHD": [
+    {
+      "tongTien": 165000,
+      "Thuoc_Id": {
+        "$oid": "61a4b926fcca1d44c8529033"
+      },
+      "soLuong": 5
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "61a4dc7c4a40bf2bbca5ff4d"
+  },
+  "ngay_Lap": {
+    "$date": "2021-11-23T17:00:00Z"
+  },
+  "ma_Khach_Hang": {
+    "$oid": "61a4dc644a40bf2bbca5ff4c"
+  },
+  "ma_Nhan_Vien": {
+    "$oid": "61a4b926fcca1d44c8529012"
+  },
+  "dsCTHD": [
+    {
+      "tongTien": 425000,
+      "Thuoc_Id": {
+        "$oid": "61a4b926fcca1d44c852902f"
+      },
+      "soLuong": 5
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "61a4dc9d4a40bf2bbca5ff4f"
+  },
+  "ngay_Lap": {
+    "$date": "2021-11-28T17:00:00Z"
+  },
+  "ma_Khach_Hang": {
+    "$oid": "61a4dc974a40bf2bbca5ff4e"
+  },
+  "ma_Nhan_Vien": {
+    "$oid": "61a4b926fcca1d44c8529012"
+  },
+  "dsCTHD": [
+    {
+      "tongTien": 425000,
+      "Thuoc_Id": {
+        "$oid": "61a4b926fcca1d44c852902f"
+      },
+      "soLuong": 5
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "61a4dd214a40bf2bbca5ff51"
+  },
+  "ngay_Lap": {
+    "$date": "2021-11-15T17:00:00Z"
+  },
+  "ma_Khach_Hang": {
+    "$oid": "61a4dd1b4a40bf2bbca5ff50"
+  },
+  "ma_Nhan_Vien": {
+    "$oid": "61a4b926fcca1d44c8529012"
+  },
+  "dsCTHD": [
+    {
+      "tongTien": 425000,
+      "Thuoc_Id": {
+        "$oid": "61a4b926fcca1d44c852902f"
+      },
+      "soLuong": 5
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "61a4dedc4a40bf1ef85d9f33"
+  },
+  "ngay_Lap": {
+    "$date": "2021-11-28T17:00:00Z"
+  },
+  "ma_Khach_Hang": {
+    "$oid": "61a4decc4a40bf1ef85d9f32"
+  },
+  "ma_Nhan_Vien": {
+    "$oid": "61a4b926fcca1d44c8529012"
+  },
+  "dsCTHD": [
+    {
+      "tongTien": 33000,
+      "Thuoc_Id": {
+        "$oid": "61a4b926fcca1d44c8529033"
+      },
+      "soLuong": 1
+    }
+  ]
+}]

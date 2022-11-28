@@ -1,0 +1,37 @@
+Font size cho label và textfield : 15 font chữ: Sanserif
+label có in đậm 
+bảng có chiều cao khoảng 2/3 giao diện
+
+sửa lại link ảnh
+
+chọn ngày tháng đang còn là tiếng anh, cần phải chỉnh lại
+
+Cỡ chữ tiêu đề : 25 in đậm Sanserif
+
+Tên class phải viết hoa chữ đầu
+Đặt tên tiền tố: jtextfield : txt
+		label : lbl
+		jbutton : btn
+		combobox : cbb
+		table : tbl
+		modeltable : 
+		checkbox : chk
+		combobox : cbo
+		radio : rdo
+		panel : p hoặc pnl
+
+màu btn : new Color(41, 242, 255)
+màu border: new Color(91, 155, 213)
+
+Note: ngày 11/8/2021
+1. Thanh thêm 1 button, ở frm danh sách khách hàng, button nằm ngay dưới chữ danh sách kh
+2. Thanh kéo lại giao diện, cho kín, màu của border giống như bên frm QLBH, chữ danh sách kh xóa nó, tạo 1 jpanel xong làm bodertitle như bên frmQLBH để chứa bảng.
+3. Thanh chèn thêm các label mẫu để sau này set số lượng thuốc vô đó, cho nó nằm ngang lại rồi kéo bảng rộng vs cao hơn.
+4. Thanh thêm label của thành tiền như bên frm QLBH, làm phải đúng như thiết kế
+
+5. Tài với Thanh sửa lại bảng cho giống như bên frm QLBH, có màu, vs dữ liệu mẫu.
+6. Tài với Thanh sửa lại tên của mấy cái biến thành phần.
+
+
+
+		

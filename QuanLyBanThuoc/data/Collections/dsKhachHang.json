@@ -1,0 +1,91 @@
+[{
+  "_id": {
+    "$oid": "61a4b926fcca1d44c8529015"
+  },
+  "sdt": "0708985897",
+  "gioi_Tinh": "Nữ",
+  "ngay_Sinh": {
+    "$date": "2001-02-28T17:00:00Z"
+  },
+  "ten_Khach_Hang": "Đoàn Phạm Bích Hợp"
+},{
+  "_id": {
+    "$oid": "61a4b926fcca1d44c8529016"
+  },
+  "sdt": "0708985977",
+  "gioi_Tinh": "Nữ",
+  "ngay_Sinh": {
+    "$date": "2001-03-31T17:00:00Z"
+  },
+  "ten_Khach_Hang": "Đoàn Thị Thủy"
+},{
+  "_id": {
+    "$oid": "61a4b926fcca1d44c8529017"
+  },
+  "sdt": "0374479123",
+  "gioi_Tinh": "Nam",
+  "ngay_Sinh": {
+    "$date": "1999-02-28T17:00:00Z"
+  },
+  "ten_Khach_Hang": "Nguyễn Công Danh"
+},{
+  "_id": {
+    "$oid": "61a4dbb14a40bf2bbca5ff47"
+  },
+  "sdt": "0949218455",
+  "gioi_Tinh": "Nam",
+  "ngay_Sinh": {
+    "$date": "2001-11-14T17:00:00Z"
+  },
+  "ten_Khach_Hang": "Lê Tuấn Tài"
+},{
+  "_id": {
+    "$oid": "61a4dc434a40bf2bbca5ff4a"
+  },
+  "sdt": "0949218444",
+  "gioi_Tinh": "Nam",
+  "ngay_Sinh": {
+    "$date": "2001-11-28T17:00:00Z"
+  },
+  "ten_Khach_Hang": "Huỳnh Tiến"
+},{
+  "_id": {
+    "$oid": "61a4dc644a40bf2bbca5ff4c"
+  },
+  "sdt": "0949218333",
+  "gioi_Tinh": "Nam",
+  "ngay_Sinh": {
+    "$date": "2001-11-28T17:00:00Z"
+  },
+  "ten_Khach_Hang": "Huỳnh Văn An"
+},{
+  "_id": {
+    "$oid": "61a4dc974a40bf2bbca5ff4e"
+  },
+  "sdt": "0186327594",
+  "gioi_Tinh": "Nam",
+  "ngay_Sinh": {
+    "$date": "2001-11-28T17:00:00Z"
+  },
+  "ten_Khach_Hang": "Huỳnh Văn Tiến"
+},{
+  "_id": {
+    "$oid": "61a4dd1b4a40bf2bbca5ff50"
+  },
+  "sdt": "0327549646",
+  "gioi_Tinh": "Nam",
+  "ngay_Sinh": {
+    "$date": "2001-11-28T17:00:00Z"
+  },
+  "ten_Khach_Hang": "Huynh Hữu Nghĩa"
+},{
+  "_id": {
+    "$oid": "61a4decc4a40bf1ef85d9f32"
+  },
+  "sdt": "0363435019",
+  "gioi_Tinh": "Nam",
+  "ngay_Sinh": {
+    "$date": "2001-11-28T17:00:00Z"
+  },
+  "ten_Khach_Hang": "Nguyễn Tuấn Thanh"
+}]

@@ -1,0 +1,91 @@
+[{
+  "_id": {
+    "$oid": "61a4b926fcca1d44c852901c"
+  },
+  "dia_Chi_NCC": "Industriestraße 8, 85072 Eichstätt, Germany",
+  "ten_NCC": "Engelhard"
+},{
+  "_id": {
+    "$oid": "61a4b926fcca1d44c852901d"
+  },
+  "dia_Chi_NCC": "67 Đ. Số 12, Phường 10, Gò Vấp, Thành phố Hồ Chí Minh, Vietnam",
+  "ten_NCC": "Bidiphar"
+},{
+  "_id": {
+    "$oid": "61a4b926fcca1d44c852901e"
+  },
+  "dia_Chi_NCC": "44 Đồng Nai, Phường 15, Quận 10, Thành phố Hồ Chí Minh, Vietnam",
+  "ten_NCC": "Pymepharco"
+},{
+  "_id": {
+    "$oid": "61a4b926fcca1d44c852901f"
+  },
+  "dia_Chi_NCC": "Lầu 18 Phòng 1808, Trade Tower, 37 Đ. Tôn Đức Thắng, Bến Nghé, Quận 1, Thành phố Hồ Chí Minh, Vietnam",
+  "ten_NCC": "Rohto-Mentholatum"
+},{
+  "_id": {
+    "$oid": "61a4b926fcca1d44c8529020"
+  },
+  "dia_Chi_NCC": "Room 1203, 12th Floor, Harbour View Tower 35 Nguyen Hue St. Ben Nghe Ward, District 1, HCMC, Bến Nghé, Quận 1, Thành phố Hồ Chí Minh, Vietnam",
+  "ten_NCC": "Janssen"
+},{
+  "_id": {
+    "$oid": "61a4b926fcca1d44c8529021"
+  },
+  "dia_Chi_NCC": "23 Chemin de Penchenery, 81100 Castres, Pháp",
+  "ten_NCC": "Tanganil"
+},{
+  "_id": {
+    "$oid": "61a4b926fcca1d44c8529022"
+  },
+  "dia_Chi_NCC": "New Frontiers Science Park, Third Ave, Harlow CM19 5AW, Vương quốc Anh",
+  "ten_NCC": "Panadol"
+},{
+  "_id": {
+    "$oid": "61a4b926fcca1d44c8529023"
+  },
+  "dia_Chi_NCC": "43/2 Hoà Bình, P. Tân Thới Hoà, Q. Tân Phú, TP. HCM, Việt Nam",
+  "ten_NCC": "Truong Son"
+},{
+  "_id": {
+    "$oid": "61a4b926fcca1d44c8529024"
+  },
+  "dia_Chi_NCC": "367 Nguyễn Trãi, P. Nguyễn Cư Trinh, Quận 1, TP. Hồ Chí Minh, Việt Nam",
+  "ten_NCC": "Gynofar"
+},{
+  "_id": {
+    "$oid": "61a4b926fcca1d44c8529025"
+  },
+  "dia_Chi_NCC": "Lô 14 Đường số 8, Tân Tạo A, Bình Tân, TP. Hồ Chí Minh, Việt Nam",
+  "ten_NCC": "Danapha"
+},{
+  "_id": {
+    "$oid": "61a4b926fcca1d44c8529026"
+  },
+  "dia_Chi_NCC": "Lô 51, Đường số 2, KCN Tân Tạo, Q.Bình Tân, TP.HCM, Việt Nam",
+  "ten_NCC": "SPM"
+},{
+  "_id": {
+    "$oid": "61a4b926fcca1d44c8529027"
+  },
+  "dia_Chi_NCC": "3 Rue Joseph Monier, 92506 Rueil-Malmaison, Pháp",
+  "ten_NCC": "BristolMyersSquibb"
+},{
+  "_id": {
+    "$oid": "61a4b926fcca1d44c8529029"
+  },
+  "dia_Chi_NCC": "Xa lộ Hà Nội, Long Bình, Quận 9, Thành phố Hồ Chí Minh, Vietnam",
+  "ten_NCC": "Sanofi Aventis"
+},{
+  "_id": {
+    "$oid": "61a4b926fcca1d44c852902d"
+  },
+  "dia_Chi_NCC": "89 Trần Thiện Chánh, Phường 12, Quận 10, Thành phố Hồ Chí Minh, Vietnam",
+  "ten_NCC": "Merap Group"
+},{
+  "_id": {
+    "$oid": "61a4b926fcca1d44c8529031"
+  },
+  "dia_Chi_NCC": "Budapest, Gyömrői út 19-21, 1103 Hungary",
+  "ten_NCC": "Gedeon Richter"
+}]

@@ -1,0 +1,31 @@
+[{
+  "_id": {
+    "$oid": "61a4b926fcca1d44c8529012"
+  },
+  "tai_Khoan": "NV1",
+  "mat_Khau": "123"
+},{
+  "_id": {
+    "$oid": "61a4b926fcca1d44c8529013"
+  },
+  "tai_Khoan": "NV2",
+  "mat_Khau": "123"
+},{
+  "_id": {
+    "$oid": "61a4b926fcca1d44c8529014"
+  },
+  "tai_Khoan": "NV3",
+  "mat_Khau": "123"
+},{
+  "_id": {
+    "$oid": "61a4df544a40bf1ef85d9f34"
+  },
+  "tai_Khoan": "NV4",
+  "mat_Khau": "123"
+},{
+  "_id": {
+    "$oid": "61a4df864a40bf1ef85d9f35"
+  },
+  "tai_Khoan": "NV5",
+  "mat_Khau": "123"
+}]

@@ -1,0 +1,81 @@
+[{
+  "_id": {
+    "$oid": "61a4b926fcca1d44c8529028"
+  },
+  "ten_Loai_Thuoc": "Thuốc kháng dị ứng"
+},{
+  "_id": {
+    "$oid": "61a4b926fcca1d44c852902c"
+  },
+  "ten_Loai_Thuoc": "Thuốc kháng viêm"
+},{
+  "_id": {
+    "$oid": "61a4b926fcca1d44c8529030"
+  },
+  "ten_Loai_Thuoc": "Thuốc ngừa thai"
+},{
+  "_id": {
+    "$oid": "61a4b926fcca1d44c8529034"
+  },
+  "ten_Loai_Thuoc": "Thuốc cảm lạnh"
+},{
+  "_id": {
+    "$oid": "61a4b926fcca1d44c8529035"
+  },
+  "ten_Loai_Thuoc": "Thuốc da liễu"
+},{
+  "_id": {
+    "$oid": "61a4b926fcca1d44c8529036"
+  },
+  "ten_Loai_Thuoc": "Thuốc giảm cân"
+},{
+  "_id": {
+    "$oid": "61a4b926fcca1d44c8529037"
+  },
+  "ten_Loai_Thuoc": "Thuốc Mắt/Tai/Mũi"
+},{
+  "_id": {
+    "$oid": "61a4b926fcca1d44c8529038"
+  },
+  "ten_Loai_Thuoc": "Thuốc tiêu hóa"
+},{
+  "_id": {
+    "$oid": "61a4b926fcca1d44c8529039"
+  },
+  "ten_Loai_Thuoc": "Thuốc thần kinh"
+},{
+  "_id": {
+    "$oid": "61a4b926fcca1d44c852903a"
+  },
+  "ten_Loai_Thuoc": "Giảm đau, hạ sốt"
+},{
+  "_id": {
+    "$oid": "61a4b926fcca1d44c852903b"
+  },
+  "ten_Loai_Thuoc": "Dầu gió, dầu cù là..."
+},{
+  "_id": {
+    "$oid": "61a4b926fcca1d44c852903c"
+  },
+  "ten_Loai_Thuoc": "Thuốc dành cho phụ nữ"
+},{
+  "_id": {
+    "$oid": "61a4b926fcca1d44c852903d"
+  },
+  "ten_Loai_Thuoc": "Thuốc dành cho nam"
+},{
+  "_id": {
+    "$oid": "61a4b926fcca1d44c852903e"
+  },
+  "ten_Loai_Thuoc": "Thuốc cơ xương khớp"
+},{
+  "_id": {
+    "$oid": "61a4b926fcca1d44c852903f"
+  },
+  "ten_Loai_Thuoc": "Vitamin & Khoáng chất"
+},{
+  "_id": {
+    "$oid": "61a4b926fcca1d44c8529040"
+  },
+  "ten_Loai_Thuoc": "Khác"
+}]

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.2">
+<persistence-unit name="ManageBook">
+	<provider>org.hibernate.ogm.jpa.HibernateOgmPersistence</provider>
+		<class>entity.OrderDetail</class>
+		<class>entity.Order</class>
+		<class>entity.Customer</class>
+		<class>entity.TypeOfBook</class>
+		<class>entity.Employee</class>
+		<class>entity.Account</class>
+		<class>entity.Book</class>
+	<properties>
+		<property name="hibernate.ogm.datastore.provider" value="mongodb"/>
+			<property name="current_session_context_class" value="thread"/>
+			<property name="hibernate.ogm.datastore.host" value="localhost"/>
+			<property name="hibernate.ogm.mongodb.port" value="27017"/>
+			<property name="hibernate.ogm.datastore.database" value="ManageBook"/>
+			<property name="hibernate.ogm.datastore.create_database" value="true"/>
+		</properties>
+</persistence-unit>
+</persistence>
