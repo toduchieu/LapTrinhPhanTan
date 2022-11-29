@@ -75,21 +75,21 @@ public class DSHD extends JFrame implements  ActionListener,MouseListener,ItemLi
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(0, 0, 1004, 683);
 		setLocationRelativeTo(null);
-		setTitle("Nhà thuốc T3");
+		setTitle("Hiệu Sách Trung Ương");
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		String ip ="";
-		try {
-			ip = InetAddress.getLocalHost().getHostAddress();
-		} catch (UnknownHostException e1) {
-			e1.printStackTrace();
-		}
+//		String ip ="";
+//		try {
+//			ip = InetAddress.getLocalHost().getHostAddress();
+//		} catch (UnknownHostException e1) {
+//			e1.printStackTrace();
+//		}
+//		
 		
-		
-		khachHangDao = (CustomerDao) Naming.lookup("rmi://"+ip+":9999/khachHangDao");
+		khachHangDao = (CustomerDao) Naming.lookup("rmi://localhost:9999/khachHangDao");
 		
 		
 		IconFontSwing.register(FontAwesome.getIconFont());
@@ -227,7 +227,7 @@ public class DSHD extends JFrame implements  ActionListener,MouseListener,ItemLi
 			int row = tbldsKH.getSelectedRow();
 			String sdt = modelKhachhang.getValueAt(row, 4).toString();
 			try {
-				Customer kh = khachHangDao.getKHTheoSDT(sdt);
+				Customer kh = khachHangDao.getCustomerByNumberPhone(sdt);
 				FrmDSKH frmHD = new FrmDSKH(this,kh);
 				
 				frmHD.setVisible(true);
@@ -328,8 +328,8 @@ public class DSHD extends JFrame implements  ActionListener,MouseListener,ItemLi
 					int i=0;
 					i++;
 					modelKhachhang.addRow(
-							new Object[] { i, kh.getTenKhachHang(),dfd.format(kh.getNgaySinh()),
-								 kh.getGioiTinh(), kh.getSdt()});
+							new Object[] { i, kh.getCustomerName(),dfd.format(kh.getDayOfBirth()),
+								 kh.getGender(), kh.getNumberPhone()});
 
 				});
 
@@ -338,12 +338,12 @@ public class DSHD extends JFrame implements  ActionListener,MouseListener,ItemLi
 		;
 	}
 	private void loadData() throws RemoteException{
-		 List<Customer> dsKH = khachHangDao.getAllKhachHang();
+		 List<Customer> dsKH = khachHangDao.getAllCustomer();
 		 DateFormat dfd = new SimpleDateFormat("dd/MM/yyyy");
 		 int i=0;
 		 for(Customer kh : dsKH) {
 			 i++;
-			 modelKhachhang.addRow(new Object[] { i, kh.getTenKhachHang(),dfd.format(kh.getNgaySinh()),kh.getGioiTinh(),kh.getSdt()});
+			 modelKhachhang.addRow(new Object[] { i, kh.getCustomerName(),dfd.format(kh.getDayOfBirth()),kh.getGender(),kh.getNumberPhone()});
 		 }
 	}
 	private void loadDataTim() throws RemoteException{
@@ -351,11 +351,11 @@ public class DSHD extends JFrame implements  ActionListener,MouseListener,ItemLi
 		String text = txtTim.getText();
 		
 		
-		Customer kh = khachHangDao.getKHTheoSDT(text);
+		Customer kh = khachHangDao.getCustomerByNumberPhone(text);
 		DateFormat dfd = new SimpleDateFormat("dd/MM/yyyy");
 		int i=1;
 		modelKhachhang.setRowCount(0);
-		modelKhachhang.addRow(new Object[] {i, kh.getTenKhachHang(),dfd.format(kh.getNgaySinh()),kh.getGioiTinh(),kh.getSdt()});	
+		modelKhachhang.addRow(new Object[] {i, kh.getCustomerName(),dfd.format(kh.getDayOfBirth()),kh.getGender(),kh.getNumberPhone()});	
 		
     
 	

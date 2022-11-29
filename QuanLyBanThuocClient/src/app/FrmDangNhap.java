@@ -77,7 +77,7 @@ public class FrmDangNhap extends JFrame implements ActionListener {
 	public FrmDangNhap() throws MalformedURLException, RemoteException, NotBoundException {
 		
 		setResizable(false);
-		setTitle("Hệ thống quản lý nhà thuốc T3");
+		setTitle("Hệ thống quản lý hiệu sách");
 		setBounds(100, 100, 650, 391);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLocationRelativeTo(null);
@@ -107,7 +107,7 @@ public class FrmDangNhap extends JFrame implements ActionListener {
 		panel.add(panel_1);
 		panel_1.setLayout(null);
 		
-		JLabel lblhethong = new JLabel("Hệ thống quản lý thuốc T3");
+		JLabel lblhethong = new JLabel("Hệ thống quản lý hiệu sách");
 		lblhethong.setIcon(new ImageIcon("C:\\Users\\Tai\\eclipse-workspace\\HeThongQuanLyThuoc\\img\\tieude2.png"));
 		lblhethong.setFont(new Font("Dialog", Font.BOLD, 25));
 		lblhethong.setBounds(30, 11, 325, 116);
@@ -121,7 +121,7 @@ public class FrmDangNhap extends JFrame implements ActionListener {
 					FrmQuenMatKhau frmQuenMatKhau=new FrmQuenMatKhau();
 					frmQuenMatKhau.setVisible(true);
 					frmQuenMatKhau.setResizable(false);
-					frmQuenMatKhau.setTitle("Hệ thống quản lý nhà thuốc");
+					frmQuenMatKhau.setTitle("Hệ thống quản lý hiệu sách");
 					frmQuenMatKhau.setBounds(100, 100, 650, 391);
 //					frmHThngQun.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 					frmQuenMatKhau.setLocationRelativeTo(null);
