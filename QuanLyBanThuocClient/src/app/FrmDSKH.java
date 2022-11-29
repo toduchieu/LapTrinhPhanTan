@@ -169,7 +169,7 @@ public class FrmDSKH extends JFrame implements  ActionListener,MouseListener,Ite
 		dsKH.setBounds(10, 20, 963, 201);
 		pKH.add(dsKH);
 		
-		String columnKH[] = { "Mã khách hàng","Tên khách hàng","Số điện thoại","Ngày mua"};
+		String columnKH[] = { "Mã hóa đơn","Tên khách hàng","Số điện thoại","Ngày mua"};
 	     modelKhachhang1 = new DefaultTableModel(columnKH, 0);
 		tbldsKH = new JTable(modelKhachhang1);
 		dsKH.setViewportView(tbldsKH);
