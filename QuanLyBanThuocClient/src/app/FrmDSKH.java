@@ -49,10 +49,10 @@ public class FrmDSKH extends JFrame implements  ActionListener,MouseListener,Ite
 	 */
 	private static final long serialVersionUID = -3119054749493430978L;
 	private JPanel contentPane;
-	private JTable tbldsThuoc;
+	private JTable tbldsBooks;
 	private JTable tbldsKH;
 	private OrderDao hoaDonDao;
-	private DefaultTableModel modelthuoc1;
+	private DefaultTableModel modelbook1;
 	private DefaultTableModel modelKhachhang1;
 	private Customer khSelect;
 	private SimpleDateFormat sf;
@@ -73,7 +73,7 @@ public class FrmDSKH extends JFrame implements  ActionListener,MouseListener,Ite
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(0, 0, 1012, 672);
 		setLocationRelativeTo(null);
-		setTitle("Nhà thuốc T3");
+		setTitle("Hiệu Sách Trung Ương");
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -82,14 +82,14 @@ public class FrmDSKH extends JFrame implements  ActionListener,MouseListener,Ite
 		
 		IconFontSwing.register(FontAwesome.getIconFont());
 		Icon icLamMoi = IconFontSwing.buildIcon(FontAwesome.REFRESH, 20, Color.blue);
-		String ip ="";
-		try {
-			ip = InetAddress.getLocalHost().getHostAddress();
-		} catch (UnknownHostException e1) {
-			e1.printStackTrace();
-		}
+//		String ip ="";
+//		try {
+//			ip = InetAddress.getLocalHost().getHostAddress();
+//		} catch (UnknownHostException e1) {
+//			e1.printStackTrace();
+//		}
 		
-		hoaDonDao =  (OrderDao) Naming.lookup("rmi://"+ip+":9999/hoaDonDao");
+		hoaDonDao =  (OrderDao) Naming.lookup("rmi://localhost:9999/hoaDonDao");
 		
 		
 		
@@ -109,43 +109,43 @@ public class FrmDSKH extends JFrame implements  ActionListener,MouseListener,Ite
 		lblTieude.setBounds(10, 20, 353, 48);
 		panel_1.add(lblTieude);
 		
-		JPanel pThuoc = new JPanel();
-		pThuoc.setBounds(10, 335, 983, 282);
-		panel_1.add(pThuoc);
-		pThuoc.setBorder(new TitledBorder(new LineBorder(new Color(91, 155, 213)), "Danh sách thuốc", TitledBorder.CENTER, TitledBorder.TOP, null, Color.BLACK));
-		pThuoc.setBackground(new Color(255,255,255,10));
-		pThuoc.setLayout(null);
+		JPanel pBook = new JPanel();
+		pBook.setBounds(10, 335, 983, 282);
+		panel_1.add(pBook);
+		pBook.setBorder(new TitledBorder(new LineBorder(new Color(91, 155, 213)), "Danh sách Sách", TitledBorder.CENTER, TitledBorder.TOP, null, Color.BLACK));
+		pBook.setBackground(new Color(255,255,255,10));
+		pBook.setLayout(null);
 		
-		JScrollPane dsThuoc = new JScrollPane();
-		dsThuoc.setBounds(10, 20, 963, 252);
-		pThuoc.add(dsThuoc);
+		JScrollPane dsBook = new JScrollPane();
+		dsBook.setBounds(10, 20, 963, 252);
+		pBook.add(dsBook);
 		
 		
-		String column[] = { "Tên thuốc","Loại thuốc","Số lượng","Đơn giá","Tổng tiền"};
-	    modelthuoc1 = new DefaultTableModel(column, 0);
-		tbldsThuoc = new JTable(modelthuoc1);
-		dsThuoc.setViewportView(tbldsThuoc);
+		String column[] = { "Tên Sách","Loại sách","Số lượng","Đơn giá","Tổng tiền"};
+		modelbook1 = new DefaultTableModel(column, 0);
+	    tbldsBooks = new JTable(modelbook1);
+	    dsBook.setViewportView(tbldsBooks);
 		
 		DefaultTableCellRenderer rightRenderer = new DefaultTableCellRenderer();
 		rightRenderer.setHorizontalAlignment(JLabel.RIGHT);
 		DefaultTableCellRenderer center = new DefaultTableCellRenderer();
 		center.setHorizontalAlignment(JLabel.CENTER);
 
-		tbldsThuoc.getColumnModel().getColumn(2).setCellRenderer(rightRenderer);
-		tbldsThuoc.getColumnModel().getColumn(3).setCellRenderer(rightRenderer);
-		tbldsThuoc.getColumnModel().getColumn(4).setCellRenderer(rightRenderer);
+		tbldsBooks.getColumnModel().getColumn(2).setCellRenderer(rightRenderer);
+		tbldsBooks.getColumnModel().getColumn(3).setCellRenderer(rightRenderer);
+		tbldsBooks.getColumnModel().getColumn(4).setCellRenderer(rightRenderer);
 		
 //		tbldsThuoc.getColumnModel().getColumn(3).setCellRenderer(center);
 		
-		JTableHeader tbHeader1 = tbldsThuoc.getTableHeader();
+		JTableHeader tbHeader1 = tbldsBooks.getTableHeader();
 		tbHeader1.setBackground(new Color(91, 155, 213,80));
 		tbHeader1.setForeground(Color.CYAN);
 		tbHeader1.setFont(new Font("SansSerif", Font.BOLD, 20));
 
 //		
-		tbldsThuoc.setSelectionBackground(new Color(91, 155, 213,30));
-		tbldsThuoc.setSelectionForeground(new Color(91, 155, 213));
-		tbldsThuoc.setRowHeight(30);
+		tbldsBooks.setSelectionBackground(new Color(91, 155, 213,30));
+		tbldsBooks.setSelectionForeground(new Color(91, 155, 213));
+		tbldsBooks.setRowHeight(30);
 		
 		lblthanhtien = new JLabel("0VNĐ");
 		lblthanhtien.setForeground(Color.RED);
@@ -187,7 +187,7 @@ public class FrmDSKH extends JFrame implements  ActionListener,MouseListener,Ite
 		tbldsKH.setRowHeight(30);
 		
 		btnLammoi = new JButton("Làm mới");
-		btnLammoi.setToolTipText("Làm mới danh sách thuốc");
+		btnLammoi.setToolTipText("Làm mới danh sách Sách");
 		btnLammoi.setBackground(Color.CYAN);
 		btnLammoi.setFont(new Font("SansSerif", Font.BOLD, 15));
 		btnLammoi.setBounds(885, 31, 108, 34);
@@ -213,7 +213,6 @@ public class FrmDSKH extends JFrame implements  ActionListener,MouseListener,Ite
 		
 		btnLammoi.setIcon(icLamMoi);
 		loadData();
-//		lblthanhtien +=modelKhachhang1.
 		
 		btnLammoi.addActionListener(this);
 		
@@ -239,8 +238,8 @@ public class FrmDSKH extends JFrame implements  ActionListener,MouseListener,Ite
 		Object o = e.getSource();
 		if(o.equals(tbldsKH)) {
 			try {
-				modelthuoc1.setRowCount(0);
-				loadDataThuoc();
+				modelbook1.setRowCount(0);
+				loadDataBook();
 			    
 			} catch (RemoteException e1) {
 				e1.printStackTrace();
@@ -295,38 +294,38 @@ public class FrmDSKH extends JFrame implements  ActionListener,MouseListener,Ite
 	public void actionPerformed(ActionEvent e) {
 	Object o = e.getSource();
 	if(o.equals(btnLammoi)) {
-		modelthuoc1.setRowCount(0);
+		modelbook1.setRowCount(0);
 		lblthanhtien.setText("0");
 	}
 		
 	}
 	private void loadData() throws RemoteException{
 		
-		 List<Order> dsHD = hoaDonDao.getHoaDonTheoMaKH(khSelect.getId());
+		 List<Order> dsHD = hoaDonDao.getOrderByCustomerId(khSelect.getId());
 		 for(Order hd : dsHD) {
 			 
-			 modelKhachhang1.addRow(new Object[] { hd.getId(), hd.getKhachHang().getTenKhachHang(),hd.getKhachHang().getSdt(),sf.format( hd.getNgayLap())});
+			 modelKhachhang1.addRow(new Object[] { hd.getId(), hd.getCustomer().getCustomerName(),hd.getCustomer().getNumberPhone(),sf.format( hd.getDateFounded())});
 		 }
 	}
-	private void loadDataThuoc() throws RemoteException{
+	private void loadDataBook() throws RemoteException{
 		int row = tbldsKH.getSelectedRow();
 		String maHD = modelKhachhang1.getValueAt(row, 0).toString();
-		List<Order> dsHD1 = hoaDonDao.getHoaDonTheoMaHD(maHD);
+		List<Order> dsHD1 = hoaDonDao.getOrderTheoOrderId(maHD);
 		DecimalFormat df = new DecimalFormat("###,###,###.####");
 		for(Order hd : dsHD1) {
-			List<OrderDetail> dsCTHD = hd.getDsCTHD();
+			List<OrderDetail> dsCTHD = hd.getOrderDetails();
 			 for(OrderDetail cthd : dsCTHD) {
-				modelthuoc1.addRow(new Object[] {cthd.getThuoc().getTenThuoc(),cthd.getThuoc().getLoaiThuoc().getTenLoai(),cthd.getSoLuong(),df.format(cthd.getThuoc().getDonGia()),df.format(cthd.getTongTien())});	
+				 modelbook1.addRow(new Object[] {cthd.getBook().getBookName(),cthd.getBook().getTypeOfBook().getName(),cthd.getQuantity(),df.format(cthd.getBook().getPrice()),df.format(cthd.getTotalPrice())});	
 			}
 		}
 		addTongTien();
 		
 	}
 	public void addTongTien() {
-		int row = tbldsThuoc.getRowCount();
+		int row = tbldsBooks.getRowCount();
 		double tongTien = 0;
 		for(int i =0 ; i<row; i++) {
-			tongTien += Double.parseDouble(modelthuoc1.getValueAt(i, 4).toString());
+			tongTien += Double.parseDouble(modelbook1.getValueAt(i, 4).toString());
 		}
 		DecimalFormat df = new DecimalFormat("###,### VNĐ");
 		lblthanhtien.setText(df.format(tongTien));
