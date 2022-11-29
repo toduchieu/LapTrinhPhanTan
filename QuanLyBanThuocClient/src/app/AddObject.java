@@ -39,13 +39,13 @@ public class AddObject {
 		BookDao bookDao =  (BookDao) Naming.lookup("rmi://localhost:9999/bookDao");
 	
 		//employee-account
-		Employee employee1 = new Employee("NV1", "Tô Đức Hiếu", "Nam", new Date(2000-1900,4-1,20), "0966105479", "60 Thống Nhất, p10, Q.Gò Vấp","Quản lý", 10000000, "Đang làm việc", new Account("hieu", "123456"));
+		Employee employee1 = new Employee("NV1", "Tô Đức Hiếu", "Nam", new Date(2000-1900,4-1,20), "0966105479", "60 Thống Nhất, p10, Q.Gò Vấp","Quản lý", 10000000, "Đang làm việc", new Account("NV1", "123456"));
 		employeeDao.addEmployee(employee1);
-		Employee employee2 = new Employee("NV2", "Lê Xuân Hòa", "Nam", new Date(2001-1900,5-1,20), "0374779028", "56 Quang Trunh, p11, Q.Gò Vấp","Nhân viên bán hàng", 5000000, "Đang làm việc", new Account("hoa", "123456"));
+		Employee employee2 = new Employee("NV2", "Lê Xuân Hòa", "Nam", new Date(2001-1900,5-1,20), "0374779028", "56 Quang Trunh, p11, Q.Gò Vấp","Nhân viên bán hàng", 5000000, "Đang làm việc", new Account("NV2", "123456"));
 		employeeDao.addEmployee(employee2);	
-		Employee employee3 = new Employee("NV3", "Hữu Nghị", "Nam", new Date(2000-1900,6-1,20), "0966712345", "170 Thống Nhất, p10, Q.Gò Vấp","Nhân viên bán hàng", 5000000, "Đang làm việc", new Account("nghi", "123456"));
+		Employee employee3 = new Employee("NV3", "Hữu Nghị", "Nam", new Date(2000-1900,6-1,20), "0966712345", "170 Thống Nhất, p10, Q.Gò Vấp","Nhân viên bán hàng", 5000000, "Đang làm việc", new Account("NV3", "123456"));
 		employeeDao.addEmployee(employee3);
-		Employee employee4 = new Employee("NV4", "Tuấn Vỹ", "Nam", new Date(2000-1900,6-1,20), "0966764582", "10 Nguyễn Văn Bảo, p4, Q.Gò Vấp","Nhân viên bán hàng", 5000000, "Đang làm việc", new Account("vy", "123456"));
+		Employee employee4 = new Employee("NV4", "Tuấn Vỹ", "Nam", new Date(2000-1900,6-1,20), "0966764582", "10 Nguyễn Văn Bảo, p4, Q.Gò Vấp","Nhân viên bán hàng", 5000000, "Đang làm việc", new Account("NV4", "123456"));
 		employeeDao.addEmployee(employee4);
 
 		//customer
