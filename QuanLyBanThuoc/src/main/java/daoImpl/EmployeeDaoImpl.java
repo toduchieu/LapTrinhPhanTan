@@ -105,5 +105,8 @@ public class EmployeeDaoImpl extends UnicastRemoteObject implements EmployeeDao 
 		}
 		return null;
 	}
-
+ public static void main(String[] args) throws RemoteException {
+	EmployeeDaoImpl tEmployeeDaoImpl = new EmployeeDaoImpl();
+	System.out.println(tEmployeeDaoImpl.getEmployeeByEmployeeId("NV1"));
+}
 }

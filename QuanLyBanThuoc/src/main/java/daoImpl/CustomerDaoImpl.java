@@ -41,7 +41,7 @@ public class CustomerDaoImpl extends UnicastRemoteObject implements CustomerDao 
 		EntityTransaction tr = em.getTransaction();
 		try {
 			tr.begin();
-			Customer kh  = (Customer) em.createNativeQuery("db.dsKhachHang.find({'number_phone' : '"+numberPhone+"'})",Customer.class).getSingleResult();
+			Customer kh  = (Customer) em.createNativeQuery("db.Customers.find({'numberPhone' : '"+numberPhone+"'})",Customer.class).getSingleResult();
 			tr.commit();		
 			return kh;
 		} catch (Exception e) {
@@ -80,5 +80,8 @@ public class CustomerDaoImpl extends UnicastRemoteObject implements CustomerDao 
 		}
 		return false;
 	}
-
+public static void main(String[] args) throws RemoteException {
+	CustomerDaoImpl teCustomerDaoImpl = new CustomerDaoImpl();
+	System.out.println(teCustomerDaoImpl.getCustomerByNumberPhone("0708985897"));
+}
 }

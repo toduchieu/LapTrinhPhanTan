@@ -28,10 +28,10 @@ public class FrmMain extends JFrame implements ActionListener  {
 	 */
 	private static final long serialVersionUID = 7754060787865635332L;
 	private JLabel jlbgetngay;
-	FrmQuanLyThuoc QuanLyThuoc=new FrmQuanLyThuoc();
-	FrmQuanLyThuoc frmQuanLyKhachHang=new FrmQuanLyThuoc();
+	FrmQuanLyThuoc QuanLyThuoc=new FrmQuanLyThuoc();					
+//	FrmQuanLyThuoc frmQuanLyKhachHang=new FrmQuanLyThuoc();
 	FrmQuanLyNhanVien frmQuanLyNhanVien=new FrmQuanLyNhanVien();
-	FrmQuanLyThongKe frmQuanLyThongKe=new FrmQuanLyThongKe();
+	
 	
 	private JButton btnquanlynhanvien;
 	private JTabbedPane tabbedPane1;
@@ -52,7 +52,7 @@ public class FrmMain extends JFrame implements ActionListener  {
 		setBounds(0, 0, 1285, 700);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLocationRelativeTo(null);
-		setTitle("Nhà thuốc T3");
+		setTitle("Nhà Sách T3");
 		
 		
 		JPanel panel = new JPanel();
@@ -72,8 +72,8 @@ public class FrmMain extends JFrame implements ActionListener  {
 		jlbmenu.setForeground(new Color(255, 255, 204));
 		panel_1.add(jlbmenu);
 		
-		JButton btnQLThuoc = new JButton("Quản lý thuốc");
-		btnQLThuoc.setToolTipText("Giao diện quản lý thuốc");
+		JButton btnQLThuoc = new JButton("Quản lý sách");
+		btnQLThuoc.setToolTipText("Giao diện quản lý sách");
 		btnQLThuoc.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				tabbedPane1.setSelectedIndex(0);
@@ -107,18 +107,7 @@ public class FrmMain extends JFrame implements ActionListener  {
 		btnquanlynhanvien.setBounds(0, 254, 254, 80);
 		panel_1.add(btnquanlynhanvien);
 		
-		JButton btnquanlythongke = new JButton("Quản lý thống kê");
-		btnquanlythongke.setToolTipText("Giao diện thống kê doanh thu");
-		btnquanlythongke.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				tabbedPane1.setSelectedIndex(3);
-			}
-		});
-		btnquanlythongke.setBackground(new Color(51, 204, 204));
-		btnquanlythongke.setFont(new Font("Tahoma", Font.BOLD, 19));
-		btnquanlythongke.setForeground(new Color(255, 255, 255));
-		btnquanlythongke.setBounds(0, 335, 254, 80);
-		panel_1.add(btnquanlythongke);
+
 		
 		JButton btnDangXuat = new JButton("Đăng xuất");
 		btnDangXuat.setToolTipText("Trở lại giao diện đăng nhập");
@@ -175,42 +164,39 @@ public class FrmMain extends JFrame implements ActionListener  {
 		tabbedPane1.setBounds(253, -49, 1026, 724);
 		panel.add(tabbedPane1);
 		
-		quanLyThuoc = new FrmQuanLyThuoc();
+		quanLyThuoc = new FrmQuanLyThuoc();							
 		tabbedPane1.addTab("New tab", null, quanLyThuoc, null);
 
 		FrmQLBH frmQLHD = new FrmQLBH(this,manv);
 		tabbedPane1.addTab("New tab", null, frmQLHD, null);
 		
-		tabbedPane1.addTab("New tab", null,frmQuanLyNhanVien , null);
+		tabbedPane1.addTab("New tab", null,frmQuanLyNhanVien , null); 
 	
-		tabbedPane1.addTab("New tab", null, frmQuanLyThongKe, null); //frmQuanLyNhanVien
+//		tabbedPane1.addTab("New tab", null, frmQuanLyThongKe, null); //frmQuanLyNhanVien  Vy cmt
+//		
+//		tabbedPane1.addTab("New tab", null, frmQuanLyThongKe, null);
 		
-		tabbedPane1.addTab("New tab", null, frmQuanLyThongKe, null);
 		
-		if(chucvu.equalsIgnoreCase("Nhân viên bán hàng")) {
-			remove(btnquanlynhanvien);
-			btnquanlythongke.setBounds(0, 93, 254, 60);
-		}
 		getTime();
 		
 		btnquanlynhanvien.addActionListener(this);
 	
 		IconFontSwing.register(FontAwesome.getIconFont());
-		Icon icSL = IconFontSwing.buildIcon(FontAwesome.MEDKIT, 50, new Color(91, 155, 213));
-		Icon icQLBH = IconFontSwing.buildIcon(FontAwesome.CART_PLUS, 50, new Color(0, 176, 80));
-		Icon icNV = IconFontSwing.buildIcon(FontAwesome.USER_MD, 50, Color.orange);
+//		Icon icSL = IconFontSwing.buildIcon(FontAwesome.MEDKIT, 50, new Color(91, 155, 213));
+//		Icon icQLBH = IconFontSwing.buildIcon(FontAwesome.CART_PLUS, 50, new Color(0, 176, 80));
+//		Icon icNV = IconFontSwing.buildIcon(FontAwesome.USER_MD, 50, Color.orange);
+//		
+//		Icon icDX = IconFontSwing.buildIcon(FontAwesome.SIGN_OUT, 30, Color.red);
+//		
+//		Icon icBarchar = IconFontSwing.buildIcon(FontAwesome.BAR_CHART, 40, Color.red);
+//		Icon icLogo = IconFontSwing.buildIcon(FontAwesome.HOSPITAL_O, 17, Color.orange);
+//		ImageIcon imgImage = (ImageIcon) icLogo;
+//		setIconImage(imgImage.getImage());
+//		btnQLThuoc.setIcon(icSL);
+//		btnHoaDon.setIcon(icQLBH);
+//		btnquanlynhanvien.setIcon(icNV);
 		
-		Icon icDX = IconFontSwing.buildIcon(FontAwesome.SIGN_OUT, 30, Color.red);
-		
-		Icon icBarchar = IconFontSwing.buildIcon(FontAwesome.BAR_CHART, 40, Color.red);
-		Icon icLogo = IconFontSwing.buildIcon(FontAwesome.HOSPITAL_O, 17, Color.orange);
-		ImageIcon imgImage = (ImageIcon) icLogo;
-		setIconImage(imgImage.getImage());
-		btnQLThuoc.setIcon(icSL);
-		btnHoaDon.setIcon(icQLBH);
-		btnquanlynhanvien.setIcon(icNV);
-		btnquanlythongke.setIcon(icBarchar);
-		btnDangXuat.setIcon(icDX);
+//		btnDangXuat.setIcon(icDX);
 		
 		
 	}

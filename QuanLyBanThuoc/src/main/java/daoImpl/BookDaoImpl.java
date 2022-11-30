@@ -8,6 +8,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 
 import org.bson.types.ObjectId;
+import org.hibernate.hql.ast.origin.hql.parse.HQLParser.new_key_return;
 
 import dao.BookDao;
 import entity.Book;
@@ -45,6 +46,11 @@ public class BookDaoImpl  extends UnicastRemoteObject implements BookDao {
 		EntityTransaction tr = em.getTransaction();
 		try {	
 			tr.begin();
+//			String query = "db.dsBooks.aggregate([{"
+//					+ "    '$match': {"
+//					+ "        'type_of_book_id': ObjectId('"+typeId+"')"		
+//					+ "    }"
+//					+ "}])";
 			String query = "db.Books.aggregate([{'$match':{'type_of_book_id': ObjectId('"+typeId+"')}}])";
 			@SuppressWarnings("unchecked")
 			List<Book> books = em.createNativeQuery(query,Book.class).getResultList();
@@ -120,5 +126,9 @@ public class BookDaoImpl  extends UnicastRemoteObject implements BookDao {
 		}	
 		return null;
 	}
-
+public static void main(String[] args) throws RemoteException {
+	ObjectId aId = new ObjectId("63864291a0b1e0024842987a");
+	BookDaoImpl bookDaoImpl =new BookDaoImpl();
+	System.out.println(bookDaoImpl.getBookByTypeId(aId));
+}
 }
