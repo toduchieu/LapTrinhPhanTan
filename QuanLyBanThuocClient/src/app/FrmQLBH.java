@@ -41,6 +41,8 @@ import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.JTableHeader;
 
+import org.hibernate.hql.ast.origin.hql.parse.HQLParser.new_key_return;
+
 import com.toedter.calendar.JDateChooser;
 
 import dao.OrderDao;
@@ -56,6 +58,7 @@ import entity.Employee;
 import entity.Book;
 import jiconfont.icons.font_awesome.FontAwesome;
 import jiconfont.swing.IconFontSwing;
+import net.bytebuddy.asm.Advice.This;
 
 
 public class FrmQLBH extends JPanel implements ActionListener,MouseListener,ItemListener {
@@ -138,11 +141,11 @@ public class FrmQLBH extends JPanel implements ActionListener,MouseListener,Item
 		}
 
 
-		hoaDonDao =  (OrderDao) Naming.lookup("rmi://"+ip+":9999/hoaDonDao");
-		khachHangDao = (CustomerDao) Naming.lookup("rmi://"+ip+":9999/khachHangDao");
-		loaiThuocDao =  (TypeOfBookDao) Naming.lookup("rmi://"+ip+":9999/loaiThuocDao");
-		nhanVienDao =  (EmployeeDao) Naming.lookup("rmi://"+ip+":9999/nhanVienDao");
-		thuocDao =  (BookDao) Naming.lookup("rmi://"+ip+":9999/thuocDao");
+		hoaDonDao =  (OrderDao) Naming.lookup("rmi://"+ip+":9999/orderDao");
+		khachHangDao = (CustomerDao) Naming.lookup("rmi://"+ip+":9999/customerDao");
+		loaiThuocDao =  (TypeOfBookDao) Naming.lookup("rmi://"+ip+":9999/typeOfBookDao");
+		nhanVienDao =  (EmployeeDao) Naming.lookup("rmi://"+ip+":9999/employeeDao");
+		thuocDao =  (BookDao) Naming.lookup("rmi://"+ip+":9999/bookDao");
 
 		 regex  = new Regex();
 	
@@ -456,30 +459,28 @@ public class FrmQLBH extends JPanel implements ActionListener,MouseListener,Item
 		chooserNgaySinh.setDate(now);
 
 		//Load loại thuốc
-		List<TypeOfBook> lsLoaiThuoc = loaiThuocDao.getAllLoaiThuoc();
+		List<TypeOfBook> lsLoaiThuoc = loaiThuocDao.getAllTypeOfBook();
 		for(TypeOfBook lt : lsLoaiThuoc) {
-			cboLoaiThuoc.addItem(lt.getTenLoai());
+			cboLoaiThuoc.addItem(lt.getName());
 		}
 		
-		//Load tên thuốc
-		String s = cboLoaiThuoc.getSelectedItem().toString();
-		TypeOfBook itemLT = null;
-		List<Book> dsThuoc = null;
-		try {
-			itemLT = loaiThuocDao.getLoaiThuocTheoTen(s);
-			dsThuoc = thuocDao.getThuocTheoMaLoai(itemLT.getId());
-			
-			
-		} catch (RemoteException e1) {
-			e1.printStackTrace();
-		}
-		cboTenThuoc.removeAllItems();
-		
-		//Load ds Thuốc
-		for (Book t : dsThuoc)
-		{
-			cboTenThuoc.addItem(t.getTenThuoc());
-		}
+//		//Load tên thuốc
+//		String s = cboLoaiThuoc.getSelectedItem().toString();
+//		TypeOfBook itemLT = null;
+//		List<Book> dsThuoc = null ;
+//		try {
+//			itemLT = loaiThuocDao.getTypeOfBookByName(s);
+//			dsThuoc = thuocDao.getBookByTypeId(itemLT.getId());
+//		} catch (RemoteException e1) {
+//			e1.printStackTrace();
+//		}
+//		cboTenThuoc.removeAllItems();
+//		
+//		//Load ds Thuốc
+//		for (Book t : dsThuoc)
+//		{
+//			cboTenThuoc.addItem(t.getBookName());
+//		}
 		
 		dfTable = new DecimalFormat("###,###");
 		df = new DecimalFormat("###,### VNĐ");
@@ -519,7 +520,7 @@ public class FrmQLBH extends JPanel implements ActionListener,MouseListener,Item
 		btnSua.addActionListener(this);
 		btnThanhToan.addActionListener(this);
 		
-		cboLoaiThuoc.addItemListener(this);
+//		cboLoaiThuoc.addItemListener(this);
 		
 		tblThuoc.addMouseListener(this);
 		tblKH.addMouseListener(this);
@@ -593,7 +594,7 @@ public class FrmQLBH extends JPanel implements ActionListener,MouseListener,Item
 	
 	public void addToTable(Book thuoc) {
 		modelThuoc.addRow(new Object[] {
-				getSTT(),thuoc.getTenThuoc(), thuoc.getLoaiThuoc().getTenLoai(),thuoc.getSoLuongTon(),dfTable.format(thuoc.getDonGia()), dfTable.format(thuoc.getSoLuongTon()*thuoc.getDonGia())
+				getSTT(),thuoc.getBookName(), thuoc.getTypeOfBook().getName(),thuoc.getQuantityInStock(),dfTable.format(thuoc.getPrice()), dfTable.format(thuoc.getQuantityInStock()*thuoc.getPrice())
 		});
 	}
 	
@@ -626,11 +627,11 @@ public class FrmQLBH extends JPanel implements ActionListener,MouseListener,Item
 		String gioiTinh  = cboGioiTinh.getSelectedItem().toString().trim();
 		
 		Customer kh = new Customer(tenKH, gioiTinh, ngaySinh, sdt);
-		Customer khTim = khachHangDao.getKHTheoSDT(sdt);
+		Customer khTim = khachHangDao.getCustomerByNumberPhone(sdt);
 		if(ktRongKH()) {
 			if(ktThongTinKH()) {
 				if(khTim == null) {
-					if(khachHangDao.addKhachHang(kh)) {
+					if(khachHangDao.addCustomer(kh)) {
 						JOptionPane.showMessageDialog(this, "Thêm khách hàng thành công");
 						loadtableKH(kh);
 					}
@@ -645,14 +646,14 @@ public class FrmQLBH extends JPanel implements ActionListener,MouseListener,Item
 			String tenLoaiThuoc = cboLoaiThuoc.getSelectedItem().toString().trim();
 			String tenThuoc = cboTenThuoc.getSelectedItem().toString().trim();
 			
-			TypeOfBook loaiThuoc = loaiThuocDao.getLoaiThuocTheoTen(tenLoaiThuoc);
-			Book t = thuocDao.getThuocTheoTenVaMaLoai(tenThuoc, loaiThuoc.getId());
+			TypeOfBook loaiThuoc = loaiThuocDao.getTypeOfBookByName(tenLoaiThuoc);
+			Book t = thuocDao.getBookByBookNameVaTypeId(tenThuoc, loaiThuoc.getId());
 			Book updateThuoc = t;
-			int soLuongUpdate = updateThuoc.getSoLuongTon();
+			int soLuongUpdate = updateThuoc.getQuantityInStock();
 			
-			int soLuongTon = t.getSoLuongTon();
+			int soLuongTon = t.getQuantityInStock();
 			int soLuongMua = 0;
-			t.setLoaiThuoc(loaiThuoc);
+			t.setTypeOfBook(loaiThuoc);
 			if(!rdoGiamSL.isSelected()) {
 				soLuongMua = getSoLuongThem();
 				soLuongUpdate -=  Integer.parseInt(txtSoLuong.getText());
@@ -662,12 +663,12 @@ public class FrmQLBH extends JPanel implements ActionListener,MouseListener,Item
 						modelThuoc.removeRow(timRow());
 					}
 					
-					t.setSoLuongTon(soLuongMua);
+					t.setQuantityInStock(soLuongMua);
 					addToTable(t);
 					double thanhTien = tinhThanhTien();
 					lblThanhTien.setText(df.format(thanhTien));
-					updateThuoc.setSoLuongTon(soLuongUpdate);
-					thuocDao.updateThuoc(updateThuoc);
+					updateThuoc.setQuantityInStock(soLuongUpdate);
+					thuocDao.updateBook(updateThuoc);
 				}
 				else JOptionPane.showMessageDialog(this, "Số lượng tồn không đủ!\nSố lượng còn: "+ soLuongTon);
 			}
@@ -680,12 +681,12 @@ public class FrmQLBH extends JPanel implements ActionListener,MouseListener,Item
 						modelThuoc.removeRow(timRow());
 					}
 					
-					t.setSoLuongTon(soLuongMua);
+					t.setQuantityInStock(soLuongMua);
 					addToTable(t);
 					double thanhTien = tinhThanhTien();
 					lblThanhTien.setText(df.format(thanhTien));
-					updateThuoc.setSoLuongTon(soLuongUpdate);
-					thuocDao.updateThuoc(updateThuoc);
+					updateThuoc.setQuantityInStock(soLuongUpdate);
+					thuocDao.updateBook(updateThuoc);
 				}
 				else JOptionPane.showMessageDialog(this, "Số lượng giảm đã vượt quá số lượng đã mua");
 			}
@@ -702,12 +703,12 @@ public class FrmQLBH extends JPanel implements ActionListener,MouseListener,Item
 			String tenLoaiThuoc = cboLoaiThuoc.getSelectedItem().toString();
 			String tenThuoc = cboTenThuoc.getSelectedItem().toString();
 			
-			TypeOfBook loaiThuoc = loaiThuocDao.getLoaiThuocTheoTen(tenLoaiThuoc);
-			Book t = thuocDao.getThuocTheoTenVaMaLoai(tenThuoc, loaiThuoc.getId());
+			TypeOfBook loaiThuoc = loaiThuocDao.getTypeOfBookByName(tenLoaiThuoc);
+			Book t = thuocDao.getBookByBookNameVaTypeId(tenThuoc, loaiThuoc.getId());
 			
 			int soLuongDaMua = Integer.parseInt(txtSoLuong.getText());
-			t.setSoLuongTon(soLuongDaMua + t.getSoLuongTon());
-			thuocDao.updateThuoc(t);
+			t.setQuantityInStock(soLuongDaMua + t.getQuantityInStock());
+			thuocDao.updateBook(t);
 			modelThuoc.removeRow(timRow());
 			
 		}
@@ -770,7 +771,7 @@ public class FrmQLBH extends JPanel implements ActionListener,MouseListener,Item
 	
 	public void timKH() throws RemoteException {
 		String sdt = txtTimKiem.getText().trim();
-		Customer kh = khachHangDao.getKHTheoSDT(sdt);
+		Customer kh = khachHangDao.getCustomerByNumberPhone(sdt);
 		if(kh == null) {
 			JOptionPane.showMessageDialog(this, "Không có kết quả tìm kiếm phù hợp!\n - Vui lòng nhập SĐT của khách hàng đã được đăng ký bao gồm 10 chữ số.");
 		}
@@ -783,24 +784,24 @@ public class FrmQLBH extends JPanel implements ActionListener,MouseListener,Item
 	public void loadtableKH(Customer kh) {
 		clearTableKH();
 		modelKH.addRow(new Object[] {
-				kh.getTenKhachHang(),kh.getSdt(),sf.format(kh.getNgaySinh()),kh.getGioiTinh()
+				kh.getCustomerName(),kh.getNumberPhone(),sf.format(kh.getDayOfBirth()),kh.getGender()
 		});
 	}
 	
 	public void suaKH() throws RemoteException {
 		int row = tblKH.getSelectedRow();
 		if(row!= -1) {
-			Customer kh = khachHangDao.getKHTheoSDT(modelKH.getValueAt(row, 1).toString());
+			Customer kh = khachHangDao.getCustomerByNumberPhone(modelKH.getValueAt(row, 1).toString());
 		
 			if(ktRongKH()) {
 				if(ktThongTinKH()) {
-					Customer khTim = khachHangDao.getKHTheoSDT(txtSDT.getText());
-					if(khTim.getSdt().equalsIgnoreCase(kh.getSdt())||khTim == null) {
-						kh.setTenKhachHang(txtTenKH.getText());
-						kh.setGioiTinh(cboGioiTinh.getSelectedItem().toString());
-						kh.setNgaySinh(chooserNgaySinh.getDate());
-						kh.setSdt(txtSDT.getText());
-						if(khachHangDao.updateKhachHang(kh)) {
+					Customer khTim = khachHangDao.getCustomerByNumberPhone(txtSDT.getText());
+					if(khTim.getNumberPhone().equalsIgnoreCase(kh.getNumberPhone())||khTim == null) {
+						kh.setCustomerName(txtTenKH.getText());;
+						kh.setGender(cboGioiTinh.getSelectedItem().toString());;
+						kh.setDayOfBirth(chooserNgaySinh.getDate());;
+						kh.setNumberPhone(txtSDT.getText());;
+						if(khachHangDao.updateCustomer(kh)) {
 							JOptionPane.showMessageDialog(this, "Sửa khách hàng thành công");
 							loadtableKH(kh);
 						}
@@ -816,9 +817,9 @@ public class FrmQLBH extends JPanel implements ActionListener,MouseListener,Item
 		List<OrderDetail> lsCT = new ArrayList<OrderDetail>();
 		
 		for(int i = 0;i<row;i++) {
-			TypeOfBook lt = loaiThuocDao.getLoaiThuocTheoTen(modelThuoc.getValueAt(i, 2).toString());
+			TypeOfBook lt = loaiThuocDao.getTypeOfBookByName(modelThuoc.getValueAt(i, 2).toString());
 			String tenThuoc = modelThuoc.getValueAt(i, 1).toString();
-			Book t = thuocDao.getThuocTheoTenVaMaLoai(tenThuoc, lt.getId());
+			Book t = thuocDao.getBookByBookNameVaTypeId(tenThuoc, lt.getId());
 			int soLuong = Integer.parseInt(modelThuoc.getValueAt(i, 3).toString());
 			OrderDetail ct = new OrderDetail(t, soLuong);
 			lsCT.add(ct);
@@ -837,11 +838,11 @@ public class FrmQLBH extends JPanel implements ActionListener,MouseListener,Item
 				int rowThuoc = tblThuoc.getRowCount();
 				if(rowThuoc != 0 ) {
 					Date ngayLap = now;
-					Employee nv = nhanVienDao.getNhanVienTheoSoNV(maNV);
-					Customer kh = khachHangDao.getKHTheoSDT(modelKH.getValueAt(rowKH, 1).toString());
+					Employee nv = nhanVienDao.getEmployeeByEmployeeId(maNV);
+					Customer kh = khachHangDao.getCustomerByNumberPhone(modelKH.getValueAt(rowKH, 1).toString());
 					List<OrderDetail> lsCTHD = getdsCTHD();
-					Order hd = new Order(ngayLap, nv, kh, lsCTHD);
-					if(hoaDonDao.addHoaDon(hd))
+					Order hd = new Order(ngayLap, kh, nv, lsCTHD);
+					if(hoaDonDao.addOrder(hd))
 					{
 						JOptionPane.showMessageDialog(this, "Thanh toán thành công.");
 					}
@@ -983,8 +984,9 @@ public class FrmQLBH extends JPanel implements ActionListener,MouseListener,Item
 			TypeOfBook lt = null;
 			List<Book> dsThuoc = null;
 			try {
-				lt = loaiThuocDao.getLoaiThuocTheoTen(s);
-				dsThuoc = thuocDao.getThuocTheoMaLoai(lt.getId());
+				lt = loaiThuocDao.getTypeOfBookByName(s);
+				System.out.println(lt);
+				dsThuoc = thuocDao.getBookByTypeId(lt.getId());
 			} catch (RemoteException e1) {
 				e1.printStackTrace();
 			}
@@ -992,8 +994,9 @@ public class FrmQLBH extends JPanel implements ActionListener,MouseListener,Item
 			for (Book t : dsThuoc)
 			{
 
-				cboTenThuoc.addItem(t.getTenThuoc());
+				cboTenThuoc.addItem(t.getBookName());
 			}
 		}
 	}
+	
 }

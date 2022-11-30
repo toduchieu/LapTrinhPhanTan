@@ -113,35 +113,35 @@ public class FrmDangNhap extends JFrame implements ActionListener {
 		lblhethong.setBounds(30, 11, 325, 116);
 		panel_1.add(lblhethong);
 		
-		JLabel txtquenmk = new JLabel("Quên mật khẩu?");
-		txtquenmk.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				try {
-					FrmQuenMatKhau frmQuenMatKhau=new FrmQuenMatKhau();
-					frmQuenMatKhau.setVisible(true);
-					frmQuenMatKhau.setResizable(false);
-					frmQuenMatKhau.setTitle("Hệ thống quản lý hiệu sách");
-					frmQuenMatKhau.setBounds(100, 100, 650, 391);
-//					frmHThngQun.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-					frmQuenMatKhau.setLocationRelativeTo(null);
-					setVisible(false);
-				} catch (MalformedURLException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				} catch (RemoteException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				} catch (NotBoundException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-				
-			}
-		});
-		txtquenmk.setFont(new Font("SansSerif", Font.ITALIC, 12));
-		txtquenmk.setBounds(536, 202, 108, 15);
-		panel_1.add(txtquenmk);
+//		JLabel txtquenmk = new JLabel("Quên mật khẩu?");
+//		txtquenmk.addMouseListener(new MouseAdapter() {
+//			@Override
+//			public void mouseClicked(MouseEvent e) {
+//				try {
+//					FrmQuenMatKhau frmQuenMatKhau=new FrmQuenMatKhau();
+//					frmQuenMatKhau.setVisible(true);
+//					frmQuenMatKhau.setResizable(false);
+//					frmQuenMatKhau.setTitle("Hệ thống quản lý hiệu sách");
+//					frmQuenMatKhau.setBounds(100, 100, 650, 391);
+////					frmHThngQun.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//					frmQuenMatKhau.setLocationRelativeTo(null);
+//					setVisible(false);
+//				} catch (MalformedURLException e1) {
+//					// TODO Auto-generated catch block
+//					e1.printStackTrace();
+//				} catch (RemoteException e1) {
+//					// TODO Auto-generated catch block
+//					e1.printStackTrace();
+//				} catch (NotBoundException e1) {
+//					// TODO Auto-generated catch block
+//					e1.printStackTrace();
+//				}
+//				
+//			}
+//		});
+//		txtquenmk.setFont(new Font("SansSerif", Font.ITALIC, 12));
+//		txtquenmk.setBounds(536, 202, 108, 15);
+//		panel_1.add(txtquenmk);
 		
 		JLabel lbldangnhap = new JLabel("Đăng nhập");
 		lbldangnhap.setFont(new Font("SansSerif", Font.BOLD, 25));

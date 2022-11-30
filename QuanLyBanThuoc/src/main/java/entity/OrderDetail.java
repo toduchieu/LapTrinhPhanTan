@@ -49,11 +49,11 @@ public class OrderDetail implements Serializable {
 		super();
 	}
 	
-	public OrderDetail(Book book, double quantity, double totalPrice) {
+	public OrderDetail(Book book, double quantity) {
 		super();
 		this.book = book;
 		this.quantity = quantity;
-		this.totalPrice = totalPrice;
+		this.totalPrice = book.getPrice()*quantity;
 	}
 	@Override
 	public String toString() {
